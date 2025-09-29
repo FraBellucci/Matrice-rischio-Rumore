@@ -236,17 +236,15 @@
 </head>
 <body>
     <div class="container">
-        <!-- HEADER -->
         <div class="card">
             <div class="card-header bg-blue">
                 ESEMPIO 1: RISCHIO RUMORE - Officina Meccanica
             </div>
         </div>
 
-        <!-- SITUAZIONE INIZIALE -->
         <div class="card">
             <div class="card-header bg-red">
-                📊 SITUAZIONE INIZIALE (prima degli interventi)
+                SITUAZIONE INIZIALE (prima degli interventi)
             </div>
             <div class="card-content">
                 <div class="info-box">
@@ -255,7 +253,7 @@
                         <li>Flessibile angolare per taglio lamiere</li>
                         <li>Livello rumore misurato: <strong>92 dB(A)</strong></li>
                         <li>Esposizione: <strong>3 ore/giorno, 5 giorni/settimana</strong></li>
-                        <li>LEX,8h calcolato: <strong>89 dB(A)</strong> → SOPRA LIMITE 87 dB</li>
+                        <li>LEX,8h calcolato: <strong>89 dB(A)</strong> - SOPRA LIMITE 87 dB</li>
                         <li>Nessun intervento tecnico fatto</li>
                         <li>Nessuna rotazione mansioni</li>
                         <li>Solo cuffie fornite (non sempre usate)</li>
@@ -263,18 +261,18 @@
                 </div>
 
                 <div class="info-box blue">
-                    <p><strong>🤔 Domande guida per PROBABILITÀ (P):</strong></p>
+                    <p><strong>Domande guida per PROBABILITA (P):</strong></p>
                     <ul>
                         <li>Frequenza esposizione? (quotidiana, 3h/giorno)</li>
-                        <li>Il danno uditivo è certo se esposto a lungo sopra 87 dB? (sì, scientificamente documentato)</li>
-                        <li>È già successo nel settore? (ipoacusia professionale è malattia tabellata, frequentissima)</li>
+                        <li>Il danno uditivo e certo se esposto a lungo sopra 87 dB? (si, scientificamente documentato)</li>
+                        <li>E gia successo nel settore? (ipoacusia professionale e malattia tabellata, frequentissima)</li>
                     </ul>
                     
-                    <p style="margin-top: 15px;"><strong>🤔 Domande guida per GRAVITÀ (G):</strong></p>
+                    <p style="margin-top: 15px;"><strong>Domande guida per GRAVITA (G):</strong></p>
                     <ul>
                         <li>Che danno causa? (ipoacusia permanente irreversibile)</li>
-                        <li>Prognosi? (malattia cronica, invalidità permanente)</li>
-                        <li>Impatto qualità vita? (alto: comunicazione compromessa, acufeni)</li>
+                        <li>Prognosi? (malattia cronica, invalidita permanente)</li>
+                        <li>Impatto qualita vita? (alto: comunicazione compromessa, acufeni)</li>
                     </ul>
                 </div>
 
@@ -284,7 +282,7 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label>
-                                Probabilità (P)
+                                Probabilita (P)
                                 <span id="initial-p-check"></span>
                             </label>
                             <select id="initial-p">
@@ -299,7 +297,7 @@
 
                         <div class="form-group">
                             <label>
-                                Gravità (G)
+                                Gravita (G)
                                 <span id="initial-g-check"></span>
                             </label>
                             <select id="initial-g">
@@ -318,10 +316,9 @@
             </div>
         </div>
 
-        <!-- SITUAZIONE DOPO INTERVENTI -->
         <div class="card">
             <div class="card-header bg-green">
-                ✅ SITUAZIONE DOPO INTERVENTI
+                SITUAZIONE DOPO INTERVENTI
             </div>
             <div class="card-content">
                 <div class="info-box">
@@ -331,8 +328,8 @@
                         <li>Dischi diamantati: <strong>-3 dB</strong></li>
                         <li>Manutenzione programmata: <strong>-2 dB</strong></li>
                         <li><strong>Nuovo livello: 83 dB</strong></li>
-                        <li>Rotazione 3 operatori × 2h invece di 2 × 3h</li>
-                        <li><strong>Nuovo LEX,8h: 77 dB</strong> → sotto 80 dB ✓</li>
+                        <li>Rotazione 3 operatori x 2h invece di 2 x 3h</li>
+                        <li><strong>Nuovo LEX,8h: 77 dB</strong> - sotto 80 dB</li>
                         <li>Barriera fonoassorbente per altri lavoratori</li>
                         <li>DPI forniti (uso residuale)</li>
                     </ul>
@@ -344,7 +341,7 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label>
-                                Probabilità (P)
+                                Probabilita (P)
                                 <span id="residual-p-check"></span>
                             </label>
                             <select id="residual-p">
@@ -359,7 +356,7 @@
 
                         <div class="form-group">
                             <label>
-                                Gravità (G)
+                                Gravita (G)
                                 <span id="residual-g-check"></span>
                             </label>
                             <select id="residual-g">
@@ -378,41 +375,38 @@
             </div>
         </div>
 
-        <!-- BUTTONS -->
         <div class="buttons">
             <button class="primary" id="verify-btn">Verifica Risposte</button>
             <button class="secondary" id="reset-btn">Ricomincia</button>
         </div>
 
-        <!-- EXPLANATION -->
         <div id="explanation" class="alert hidden">
             <div style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px;">
-                📝 SPIEGAZIONE DELLE RISPOSTE CORRETTE:
+                SPIEGAZIONE DELLE RISPOSTE CORRETTE:
             </div>
             
             <div class="explanation-box">
                 <p style="font-weight: 600;">Situazione Iniziale: P=5, G=4, R=20</p>
-                <p style="margin-top: 8px;"><strong>P=5 (Quasi Certo)</strong>: Esposizione quotidiana oltre limite legale (89 vs 87 dB). Il danno uditivo è scientificamente certo con questa esposizione prolungata.</p>
-                <p style="margin-top: 8px;"><strong>G=4 (Molto Grave)</strong>: Ipoacusia permanente irreversibile, malattia professionale invalidante, grave impatto qualità vita.</p>
+                <p style="margin-top: 8px;"><strong>P=5 (Quasi Certo)</strong>: Esposizione quotidiana oltre limite legale (89 vs 87 dB). Il danno uditivo e scientificamente certo con questa esposizione prolungata.</p>
+                <p style="margin-top: 8px;"><strong>G=4 (Molto Grave)</strong>: Ipoacusia permanente irreversibile, malattia professionale invalidante, grave impatto qualita vita.</p>
                 <p style="margin-top: 8px;"><strong>R=20 (MOLTO ALTO)</strong>: Richiede intervento immediato obbligatorio.</p>
             </div>
 
             <div class="explanation-box" style="margin-top: 15px;">
                 <p style="font-weight: 600;">Rischio Residuo: P=2, G=2, R=4</p>
                 <p style="margin-top: 8px;"><strong>P=2 (Poco Probabile)</strong>: Livello 77 dB ben sotto limiti. Riduzione tecnica + organizzativa efficaci. Danno possibile solo in caso di esposizioni anomale non previste.</p>
-                <p style="margin-top: 8px;"><strong>G=2 (Medio)</strong>: Gravità intrinseca del danno resta (ipoacusia), ma ora molto improbabile. Con DPI residuali disponibili, danno limitato.</p>
+                <p style="margin-top: 8px;"><strong>G=2 (Medio)</strong>: Gravita intrinseca del danno resta (ipoacusia), ma ora molto improbabile. Con DPI residuali disponibili, danno limitato.</p>
                 <p style="margin-top: 8px;"><strong>R=4 (BASSO)</strong>: Rischio accettabile con monitoraggio periodico.</p>
             </div>
 
             <div class="explanation-box success" style="margin-top: 15px;">
-                <p style="font-weight: 600;">✅ Riduzione del rischio: da R=20 (Molto Alto) a R=4 (Basso) = -80%</p>
+                <p style="font-weight: 600;">Riduzione del rischio: da R=20 (Molto Alto) a R=4 (Basso) = -80%</p>
                 <p style="margin-top: 8px;">Seguita correttamente la gerarchia: riduzione fonte + organizzazione + DPI residuali.</p>
             </div>
         </div>
 
-        <!-- LEGEND -->
         <div class="legend">
-            <div class="legend-title">📋 LEGENDA MATRICE 5×5</div>
+            <div class="legend-title">LEGENDA MATRICE 5x5</div>
             <p><strong>1-4:</strong> BASSO (accettabile, monitoraggio)</p>
             <p><strong>5-9:</strong> MEDIO (misure migliorative)</p>
             <p><strong>10-15:</strong> ALTO (intervento necessario)</p>
@@ -447,7 +441,7 @@
                 var r = p * g;
                 
                 resultDiv.className = 'result-box ' + riskData.cssClass;
-                resultDiv.innerHTML = '<p style="font-weight: bold; font-size: 1.1em;">RISCHIO (R = P × G) = ' + r + '</p>' +
+                resultDiv.innerHTML = '<p style="font-weight: bold; font-size: 1.1em;">RISCHIO (R = P x G) = ' + r + '</p>' +
                     '<p style="font-weight: bold; font-size: 1.3em; margin-top: 10px;">Livello: ' + riskData.level + '</p>';
                 resultDiv.classList.remove('hidden');
             } else {
@@ -472,13 +466,13 @@
             }
 
             document.getElementById('initial-p-check').innerHTML = 
-                initialP === correctAnswers.initial.P ? '<span class="check-mark">✓</span>' : '<span class="x-mark">✗</span>';
+                initialP === correctAnswers.initial.P ? '<span class="check-mark">OK</span>' : '<span class="x-mark">NO</span>';
             document.getElementById('initial-g-check').innerHTML = 
-                initialG === correctAnswers.initial.G ? '<span class="check-mark">✓</span>' : '<span class="x-mark">✗</span>';
+                initialG === correctAnswers.initial.G ? '<span class="check-mark">OK</span>' : '<span class="x-mark">NO</span>';
             document.getElementById('residual-p-check').innerHTML = 
-                residualP === correctAnswers.residual.P ? '<span class="check-mark">✓</span>' : '<span class="x-mark">✗</span>';
+                residualP === correctAnswers.residual.P ? '<span class="check-mark">OK</span>' : '<span class="x-mark">NO</span>';
             document.getElementById('residual-g-check').innerHTML = 
-                residualG === correctAnswers.residual.G ? '<span class="check-mark">✓</span>' : '<span class="x-mark">✗</span>';
+                residualG === correctAnswers.residual.G ? '<span class="check-mark">OK</span>' : '<span class="x-mark">NO</span>';
 
             document.getElementById('initial-p').disabled = true;
             document.getElementById('initial-g').disabled = true;
