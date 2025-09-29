@@ -421,7 +421,7 @@
         };
 
         function calculateRisk(p, g) {
-            var risk = p x g;
+            var risk = p*g;
             if (risk <= 4) return { level: 'BASSO', cssClass: 'low' };
             if (risk <= 9) return { level: 'MEDIO', cssClass: 'medium' };
             if (risk <= 15) return { level: 'ALTO', cssClass: 'high' };
